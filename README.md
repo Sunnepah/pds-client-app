@@ -7,13 +7,9 @@
 [Node.js](http://nodejs.org/).*
 
 * Fork this repository.
-* `$ git clone  git@github.com:<your username>/third-party-iupds.git`
-* `$ mkvirtualenv third-party-iupds`
-* `$ cd third-party-iupds/`
+* `$ git clone  git@github.com:<your username>/pds-client-app.git`
+* `$ mkvirtualenv pds-client-app`
+* `$ cd pds-client-app/`
 * `$ pip install -r requirements-local.txt`
-* `$ npm install -g bower`
-* `$ npm install`
-* `$ bower install`
-* `$ gulp default`
 * `$ python manage.py migrate`
 * `$ python manage.py runserver`
