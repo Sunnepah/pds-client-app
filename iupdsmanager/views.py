@@ -3,8 +3,9 @@
 from iupds import settings
 
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, renderer_classes
 from rest_framework.response import Response
+from rest_framework.renderers import JSONRenderer
 from django.shortcuts import render
 from django.shortcuts import redirect
 
@@ -40,10 +41,11 @@ def request_authorization(request):
 @api_view(['GET'])
 def request_token(request):
     try:
-        r = requests.post(settings.PDS_API_ENDPOINT, data={'response_type': 'code',
-                                                       'client_id': settings.PDS_CLIENT_ID,
-                                                       'redirect_uri': settings.CLIENT_CALLBACK,
-                                                       })
+        r = requests.post(settings.PDS_API_ENDPOINT,
+                          data={'response_type': 'code',
+                                'client_id': settings.PDS_CLIENT_ID,
+                                'redirect_uri': settings.CLIENT_CALLBACK,
+                                })
         print r.content
         print settings.PDS_API_ENDPOINT
         return Response({
@@ -56,6 +58,7 @@ def request_token(request):
 
 
 @api_view(['GET'])
+@renderer_classes((JSONRenderer,))
 def token_callback(request):
     try:
         if request.method == 'GET' and 'error' in request.GET:
@@ -115,3 +118,20 @@ def test(request):
     return Response({
         'status': 'ok'
     })
+
+
+def get_user_data(token_data):
+    import requests
+
+    url = "http://my-tyk-instance.dev:8080/api/v1/users/1/emails/"
+
+    headers = {
+        'authorization': "Bearer "+str(token_data['access_token']),
+        'cache-control': "no-cache"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    if response.status_code == 200:
+        print(response.text)
+        return response.json()
