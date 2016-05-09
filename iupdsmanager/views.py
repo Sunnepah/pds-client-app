@@ -24,8 +24,7 @@ def request_authorization(request):
     try:
         pds_authorize_url = settings.PDS_OAUTH_ENDPOINT
 
-        pds_authorize_url = pds_authorize_url + "?client_id=" + settings.PDS_CLIENT_ID +\
-                            "&response_type=code" \
+        pds_authorize_url = pds_authorize_url + "?client_id=" + settings.PDS_CLIENT_ID + "&response_type=code" \
                             "&state=" + settings.REQUEST_STATE + \
                             "&redirect_uri=" + settings.CLIENT_CALLBACK
 
