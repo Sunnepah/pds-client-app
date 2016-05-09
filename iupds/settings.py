@@ -181,8 +181,8 @@ PDS_OAUTH_ENDPOINT = 'http://my-tyk-instance.dev:8080/oauth/authorize/'
 
 PDS_OAUTH_TOKEN_ENDPOINT = 'http://my-tyk-instance.dev:8080/oauth/token/'
 
-PDS_CLIENT_ID = '16a2ec25cc8d4fed699fde32216faa23'
-PDS_CLIENT_SECRET = 'MmFmOTUxNjktMTAxNy00ODk5LTRjNjEtODdlMjMzZGU2Njlm'
+PDS_CLIENT_ID = '735154ff149c4a2761d54ae39ff330a7'
+PDS_CLIENT_SECRET = 'NDlkNTk5OGItODAzYS00NmEyLTRjNDEtZjUzNTdjYjlhNWRl'
 
 CLIENT_CALLBACK = 'http://third-party-app.dev:9190/api/v1/token_callback/'
 
