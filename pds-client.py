@@ -37,13 +37,11 @@ def create_app(configfile=None):
     PDS_OAUTH_ENDPOINT = 'http://my-tyk-instance.dev:8080/oauth/authorize/'
     PDS_OAUTH_TOKEN_ENDPOINT = 'http://my-tyk-instance.dev:8080/oauth/token/'
 
-    PDS_CLIENT_ID = '8d3a91d50add41aa783b45784f3f9a74'
-    PDS_CLIENT_SECRET = 'YmFkMzU1ZjctZmIwOC00YTkzLTZmMmMtMjRkZmRhMmRhYTUz'
+    PDS_CLIENT_ID = 'ffedab5c7d3549455af73176612cbb10'
+    PDS_CLIENT_SECRET = 'ZjEzZmIyZTQtNGZlYy00YjliLTc3Y2QtYzI3MzdhZGQ2YTIy'
     CLIENT_CALLBACK = 'http://127.0.0.1:9190/token_callback/'
 
     REQUEST_STATE = '0807edf7d85e5d'
-
-    TYK_NODE_SECRET = '352d20ee67be67f6340b4c0605b044b7'
 
     @app.route('/', methods=('GET', 'POST'))
     def index():
@@ -117,7 +115,7 @@ def create_app(configfile=None):
             return jsonify(response={'Error': 'Key error'})
 
     def get_user_data(token_data, user_id):
-        user_data_url = "http://my-tyk-instance.dev:8080/api/v1/users/"+ str(user_id) +"/emails/"
+        user_data_url = "http://my-tyk-instance.dev:8080/api/v1/users/"+ str(user_id) + "/emails/"
         headers = {
             'authorization': "Bearer " + str(token_data['access_token']),
             'cache-control': "no-cache"
