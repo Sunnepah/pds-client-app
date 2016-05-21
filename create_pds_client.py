@@ -20,13 +20,13 @@ try:
 
         received_json_data = json.loads(pds_response.text)
 
-        print received_json_data
+        print pds_response.text
 
         client_id = received_json_data['client_id']
         client_secret = received_json_data['client_secret']
-        redirect_uris = received_json_data['redirect_uri']
-        client_name = received_json_data['client_name']
+        redirect_uri = received_json_data['redirect_uri']
     else:
+        print pds_response.status_code
         print "Unable to create client"
 except Exception as e:
     print e.message
