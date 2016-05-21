@@ -12,7 +12,7 @@
 * `$ source venv/bin/activate`
 * `$ pip install -r requirements.txt # installs flask, flask_bootstrap`
 *  Read the comments in create_pds_client.py before running the script
-* `$ python create_pds_client.py     # Create client, tyk server must be running`
+* `$ python create_pds_client.py     # PDS on AppScale and Tyk server must be running`
 *  Using the client's credentials created in previous step, update client_id, client_secret and redirect_uri in pds-client.py 
 * `$ python pds-client.py`
 
