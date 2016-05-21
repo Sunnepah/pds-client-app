@@ -3,7 +3,7 @@
 ## Installation
 
 *NOTE: Requires [virtualenv](http://virtualenv.readthedocs.org/en/latest/), 
-[PDS running on AppScale](https://github.com/Sunnepah/iupds-appscale), [Tyk API Gateway](https://tyk.io/docs/tyk-api-gateway-v-2-0/installation-options-setup/vagrant/).*
+[PDS running on AppScale](https://github.com/Sunnepah/iupds-appscale).*
 
 * Fork this repository.
 * `$ git clone  git@github.com:<your username>/pds-client-app.git`
