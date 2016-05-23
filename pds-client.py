@@ -33,7 +33,6 @@ def create_app(configfile=None):
     app.config['SECRET_KEY'] = 'devkey'
 
     # in a real app, these should be configured through Flask-Appconfig
-    PDS_API_ENDPOINT = 'http://192.168.33.19:9000'
     PDS_OAUTH_ENDPOINT = 'http://my-tyk-instance.dev:8080/oauth/authorize/'
     PDS_OAUTH_TOKEN_ENDPOINT = 'http://my-tyk-instance.dev:8080/oauth/token/'
 
