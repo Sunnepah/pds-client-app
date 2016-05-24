@@ -1,6 +1,7 @@
 import requests
 import json
 
+# url to pds application on AppScale, modify if necessary
 pds_url = 'http://192.168.33.10:8080/oauth/clients/create/'
 
 payload = {
