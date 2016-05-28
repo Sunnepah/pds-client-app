@@ -1,9 +1,9 @@
-# pds-client Set Up
+# Client App for [PDS](https://github.com/Sunnepah/iupds-appscale) and [PDS Graph API](https://github.com/Sunnepah/pdsservice.git)
 
 *NOTE: Requires [virtualenv](http://virtualenv.readthedocs.org/en/latest/), [PDS running on AppScale](https://github.com/Sunnepah/iupds-appscale).*
 
 Fork this repository.
-* `$ git clone  git@github.com:<your username>/pds-client-app.git`
+* `$ git clone https://github.com/Sunnepah/pds-client-app.git`
 * `$ cd pds-client-app`
 * `$ virtualenv venv`
 * `$ source venv/bin/activate`
